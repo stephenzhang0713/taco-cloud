@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import tacos.Ingredient;
-import tacos.TacoCloudApplication;
+import tacos.Taco;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,7 +39,7 @@ public class DesignTacoController {
 			model.addAttribute(type.toString().toLowerCase(),
 					filterByType(ingredients, type));
 		}
-		model.addAttribute("design", new TacoCloudApplication());
+		model.addAttribute("design", new Taco());
 
 		return "design";
 	}
